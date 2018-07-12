@@ -1,3 +1,15 @@
-<p>
-  result works!
-</p>
+<!-- Displays depending on the final results-->
+<div class="row">
+  <div class="col">
+      
+          <div>{{ quiz.finalResult }}</div>
+     
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <a routerLink="/question/1"><button class="btn btn-primaty" (click)="quiz.restartQuiz()">Restart Quiz?</button></a>
+  </div>
+</div>
+
