@@ -1,39 +1,76 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
+
+  // Gets the value from user and adds it to the total and moves to next question.
+  goNextQuestion(index, result) {
+    this.totalResult = this.totalResult + result;
+    
+    if (this.questions[index].id < this.questions.length) {
+      this.questions[index].id++;
+
+      this.router.navigate([`/question/${this.questions[index].id}`]);
+      
+    } else {
+      this.getResult(this.totalResult);
+      this.router.navigate([`/result`]);
+
+    }
+
+  }
+
+  // Checks to see what is the final results and display the results.
+  getResult(totalResult){
+    if (totalResult <= 9) {
+      return this.finalResult = "clown";
+    } else if (totalResult <= 19) {
+      return this.finalResult = "beardedlady";
+    } else if (totalResult <= 29) {
+      return this.finalResult = "acrobat";
+    } else if (totalResult <= 40) {
+      return this.finalResult = "ringmaster";
+    }
+  }
+
+  // restartQuiz Function to restarts the result value back to 0.
+  restartQuiz(){
+    this.result = 0;
+    this.totalResult = 0;
+  }
+
   // Place all varibles here
-  description = "I am working in the service!";
-  
   result = 0;
   totalResult = 0;
-  finalResult = "teacher";
+  finalResult = "clown";
 
+  // Array of questions
   questions = [
     // Question 1
     {
       id: 1,
-      name: "Which choice best describes you?",
+      question: "Which choice best describes you?",
       choices: [ 
         {
-          name: "A. Teach",
+          answer: "A. Teach",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Problem Solving",
+          answer: "B. Problem Solving",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Debate",
+          answer: "C. Debate",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Help People",
+          answer: "D. Help People",
           value: 4, 
           selection: false
         }
@@ -42,25 +79,25 @@ export class QuizService {
     // Question 2
     {
       id: 2,
-      name: "What is your best quality?",
+      question: "What is your best quality?",
       choices: [ 
         {
-          name: "A. Outgoing Personality",
+          answer: "A. Outgoing Personality",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Drive and Focus",
+          answer: "B. Drive and Focus",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Good Looks",
+          answer: "C. Good Looks",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Kindness",
+          answer: "D. Kindness",
           value: 4, 
           selection: false
         }
@@ -69,25 +106,25 @@ export class QuizService {
     // Question 3
     {
       id: 3,
-      name: "What kind of music do you like?",
+      question: "What kind of music do you like?",
       choices: [ 
         {
-          name: "A. Country",
+          answer: "A. Country",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Metal",
+          answer: "B. Metal",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Pop music",
+          answer: "C. Pop music",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Classical",
+          answer: "D. Classical",
           value: 4, 
           selection: false
         }
@@ -96,25 +133,25 @@ export class QuizService {
     // Question 4
     {
       id: 4,
-      name: "Are you an introvert or an extrovert?",
+      question: "Are you an introvert or an extrovert?",
       choices: [ 
         {
-          name: "A. Introvert",
+          answer: "A. Introvert",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Exrovert",
+          answer: "B. Exrovert",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Both",
+          answer: "C. Both",
           value: 3, 
           selection: false
         },
         {
-          name: "D. I don't know",
+          answer: "D. I don't know",
           value: 4, 
           selection: false
         }
@@ -123,25 +160,25 @@ export class QuizService {
     // Question 5
     {
       id: 5,
-      name: "What is your favorite subject?",
+      question: "What is your favorite subject?",
       choices: [ 
         {
-          name: "A. English",
+          answer: "A. English",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Math",
+          answer: "B. Math",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Government",
+          answer: "C. Government",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Biology",
+          answer: "D. Biology",
           value: 4, 
           selection: false
         }
@@ -151,25 +188,25 @@ export class QuizService {
     // Insert a picture in choices
     {
       id: 6,
-      name: "Which vehicle do you like best",
+      question: "Which vehicle do you like best",
       choices: [ 
         {
-          name: "A. Ford Focus",
+          answer: "A. Ford Focus",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Challenger",
+          answer: "B. Challenger",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Mercedes",
+          answer: "C. Mercedes",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Ferari",
+          answer: "D. Ferari",
           value: 4, 
           selection: false
         }
@@ -178,25 +215,25 @@ export class QuizService {
     // Question 7
     {
       id: 7,
-      name: "What can't you live without?",
+      question: "What can't you live without?",
       choices: [ 
         {
-          name: "A. Books",
+          answer: "A. Books",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Computer",
+          answer: "B. Computer",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Music",
+          answer: "C. Music",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Phone",
+          answer: "D. Phone",
           value: 4, 
           selection: false
         }
@@ -206,25 +243,25 @@ export class QuizService {
     // Insert Picture in choices
     { 
       id: 8,
-      name: "Which style suits you best?",
+      question: "Which style suits you best?",
       choices: [ 
         {
-          name: "A. slacks and tennis",
+          answer: "A. slacks and tennis",
           value: 1, 
           selection: false
         },
         {
-          name: "B. T-shirt and jeans",
+          answer: "B. T-shirt and jeans",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Suit",
+          answer: "C. Suit",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Hawaiian Shirt",
+          answer: "D. Hawaiian Shirt",
           value: 4, 
           selection: false
         }
@@ -233,25 +270,25 @@ export class QuizService {
     // Question 9
     {
       id: 9,
-      name: "Which activity do you like doing the most?",
+      question: "Which activity do you like doing the most?",
       choices: [ 
         {
-          name: "A. Arts and Crafts",
+          answer: "A. Arts and Crafts",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Skateboarding",
+          answer: "B. Skateboarding",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Golf",
+          answer: "C. Golf",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Fishing",
+          answer: "D. Fishing",
           value: 4, 
           selection: false
         }
@@ -261,25 +298,25 @@ export class QuizService {
     // Insert Picture in choices
     { 
       id: 10,
-      name: "Which meal do you like the most?",
+      question: "Which meal do you like the most?",
       choices: [ 
         {
-          name: "A. Tacos",
+          answer: "A. Tacos",
           value: 1, 
           selection: false
         },
         {
-          name: "B. Pizza",
+          answer: "B. Pizza",
           value: 2, 
           selection: false
         },
         {
-          name: "C. Goose",
+          answer: "C. Goose",
           value: 3, 
           selection: false
         },
         {
-          name: "D. Caviar",
+          answer: "D. Caviar",
           value: 4, 
           selection: false
         }
@@ -287,28 +324,7 @@ export class QuizService {
     }
   ]
 
-  // getTotalResult Function which adds the totals throughout the quiz.
-  getTotalResult(userInput) {
-    this.totalResult = this.totalResult + userInput; 
-  }
-
-  // getResult Function which checks to see what is the final results.
-  getResult(totalResult){
-    if (totalResult <= 9) {
-      return this.finalResult = "teacher";
-    } else if (totalResult <= 19) {
-      return this.finalResult = "engineer";
-    } else if (totalResult <= 29) {
-      return this.finalResult = "lawyer";
-    } else if (totalResult <= 40) {
-      return this.finalResult = "doctor";
-    }
-  }
-
-  // restartQuiz Function to restarts the result value back to 0.
-  restartQuiz(){
-    this.result = 0;
-  }
-
-  constructor() { }
+  constructor(private router: Router) {
+    this.router = router;
+   }
 }
