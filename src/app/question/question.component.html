@@ -6,21 +6,21 @@
 </header>
  <div class="col-lg-4 text-center">
   <!-- show the questions title -->
-  <h1>Questions{{ this.quiz.currentQuestion}}:{{this.quiz.questions[this.quiz.currentQuestion].name}}</h1>
+  <h1>Questions{{ this.quiz.currentQuestion}}:{{this.quiz.questions[this.quiz.currentQuestion].question}}</h1>
 </div>
 <div class="row d-flex justify-content-center mt-5">
   <div class="col-lg-4 text-center">
     <div *ngFor="let choice of this.quiz.questions[this.quiz.currentQuestion].choices">
-      {{ choice.name }}
-      <input [value]="choice.value" type="radio" [{ngModel}]="this.quiz.questions
-      [this.quiz.currentQuestion].selecedAnswer">
+      {{ choice.answer }}
+      <input [value]="choice.value" type="radio" [(ngModel)]="this.quiz.questions
+      [this.quiz.currentQuestion].selectedAnswer">
     </div>
   </div>
 </div>
 <div class="row d-flex justify-content-center mt-3">
   <div class="col-lg-4 d-flex justify-content-between text-center">
     <button (click)="this.quiz.goPreviousQuestion()" class="btn-danger">Go Back</button>
-    <button (click)="this.quizgoNextQuestion()" class="btn btn-success">Col</button>
+    <button (click)="this.quiz.goNextQuestion(choice.value)" class="btn btn-success">Col</button>
   </div>
 </div>
 
