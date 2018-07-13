@@ -1,7 +1,27 @@
 <header class="hero">
-  <div class="hero-image"><img class="slow-grow" class="bgimg"/></div>
+  <div class="hero-image"><img class="slow-grow" src="https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg"/></div>
   <div class="hero-text">
-    <h1>test demo text</h1><a class="button" href="#bear-facts">Learn More</a>
+    <h1>test demo text</h1><a class="button" href="#bear-facts">Learn More</a><a class="button" href="#bear-facts">Next</a>
   </div>
 </header>
+ <div class="col-lg-4 text-center">
+  <!-- show the questions title -->
+  <h1>Questions{{ this.quiz.currentQuestion}}:{{this.quiz.questions[this.quiz.currentQuestion].name}}</h1>
+</div>
+<div class="row d-flex justify-content-center mt-5">
+  <div class="col-lg-4 text-center">
+    <div *ngFor="let choice of this.quiz.questions[this.quiz.currentQuestion].choices">
+      {{ choice.name }}
+      <input [value]="choice.value" type="radio" [{ngModel}]="this.quiz.questions
+      [this.quiz.currentQuestion].selecedAnswer">
+    </div>
+  </div>
+</div>
+<div class="row d-flex justify-content-center mt-3">
+  <div class="col-lg-4 d-flex justify-content-between text-center">
+    <button (click)="this.quiz.goPreviousQuestion()" class="btn-danger">Go Back</button>
+    <button (click)="this.quizgoNextQuestion()" class="btn btn-success">Col</button>
+  </div>
+</div>
+
 

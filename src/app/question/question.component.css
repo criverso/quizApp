@@ -20,10 +20,7 @@
     margin: 0;
     font-weight: 600;
   }
-  .bgimg{
-    
-      background-image: url("https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg")
-  }
+  
   .hero-image {
     position: absolute;
     top: 0;
@@ -31,7 +28,8 @@
     z-index: 1;
   }
   .hero-image img {
-     
+      height: 1000px;
+    width: 100%;
     margin-top: -25%;
     -webkit-transform-origin: bottom right;
             transform-origin: bottom right;
