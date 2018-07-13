@@ -1,9 +1,47 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
+
+  // Gets the value from user and adds it to the total and moves to next question.
+  goNextQuestion(index, result) {
+    this.totalResult = this.totalResult + result;
+    
+    if (this.questions[index].id < this.questions.length) {
+      this.questions[index].id++;
+
+      this.router.navigate([`/question/${this.questions[index].id}`]);
+      
+    } else {
+      this.getResult(this.totalResult);
+      this.router.navigate([`/result`]);
+
+    }
+
+  }
+
+  // Checks to see what is the final results and display the results.
+  getResult(totalResult){
+    if (totalResult <= 9) {
+      return this.finalResult = "clown";
+    } else if (totalResult <= 19) {
+      return this.finalResult = "beardedlady";
+    } else if (totalResult <= 29) {
+      return this.finalResult = "acrobat";
+    } else if (totalResult <= 40) {
+      return this.finalResult = "ringmaster";
+    }
+  }
+
+  // restartQuiz Function to restarts the result value back to 0.
+  restartQuiz(){
+    this.result = 0;
+    this.totalResult = 0;
+  }
+
   // Place all varibles here
   result = 0;
   totalResult = 0;
@@ -286,41 +324,7 @@ export class QuizService {
     }
   ]
 
-  // Gets the value from user and adds it to the total and moves to next question.
-  goNextQuestion(index, result) {
-    this.totalResult = this.totalResult + result;
-    
-    if (this.questions[index].id < this.questions.length) {
-      this.questions[index].id++;
-
-    //  this.router.navigate([`/question/${this.questions.[index].id}`]);
-      
-    } else {
-      this.getResult(this.totalResult);
-    //  this.router.navigate([`/result`]);
-
-    }
-
-  }
-
-  // Checks to see what is the final results and display the results.
-  getResult(totalResult){
-    if (totalResult <= 9) {
-      return this.finalResult = "clown";
-    } else if (totalResult <= 19) {
-      return this.finalResult = "beardedlady";
-    } else if (totalResult <= 29) {
-      return this.finalResult = "acrobat";
-    } else if (totalResult <= 40) {
-      return this.finalResult = "ringmaster";
-    }
-  }
-
-  // restartQuiz Function to restarts the result value back to 0.
-  restartQuiz(){
-    this.result = 0;
-    this.totalResult = 0;
-  }
-
-  constructor() { }
+  constructor(private router: Router) {
+    this.router = router;
+   }
 }
