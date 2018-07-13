@@ -1,11 +1,14 @@
-/* .col {
-    background: #a156e77a;
-}
 button {
-    background: #a156e77a;
     padding: 0;
     margin: 0;
-} */
+    background-color: rgba(0,0,0,0.0);
+    font-size: 80px;
+    border: none;
+    color: red !important; 
+}
+.ticket {
+    color: #ffec7fe7;
+}
 /* Video */
 * { box-sizing: border-box; }
 .video-background {
@@ -23,13 +26,13 @@ button {
   height: 100%;
   pointer-events: none;
 }
-#vidtop-content {
-	top: 0;
+/* #vidtop-content {
+	float: left;
 	color: #fff;
-}
-.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+} */
+.vid-info { position: absolute; left: 0px; top: 30%; width: 100%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
 .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
-.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+.vid-info a { display: block; color: #fff; text-decoration: none;  transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
 }

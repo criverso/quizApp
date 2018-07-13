@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private quiz: QuizService) {
     this.quiz = quiz;
-    console.log(this.quiz.description);
    }
 
   ngOnInit() {
