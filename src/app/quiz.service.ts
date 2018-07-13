@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
 export class QuizService {
 
   // Gets the value from user and adds it to the total and moves to next question.
-  goNextQuestion(index, result) {
+  goNextQuestion(result) {
     this.totalResult = this.totalResult + result;
     
-    if (this.questions[index].id < this.questions.length) {
-      this.questions[index].id++;
+    if (this.currentQuestion < 10 ) {
+      this.currentQuestion++;
 
-      this.router.navigate([`/question/${this.questions[index].id}`]);
+      this.router.navigate([`/question/${this.currentQuestion}`]);
       
     } else {
       this.getResult(this.totalResult);
@@ -23,6 +23,17 @@ export class QuizService {
 
   }
 
+  // This returns back depending a page.
+  goPreviousQuestion(){
+    if(this.currentQuestion > 0 ) {
+      this.currentQuestion--;
+      
+      this.router.navigate([`question/${this.currentQuestion}`]);
+    } else {
+      this.router.navigate([`/`]);
+    }
+
+  }
   // Checks to see what is the final results and display the results.
   getResult(totalResult){
     if (totalResult <= 9) {
@@ -40,9 +51,13 @@ export class QuizService {
   restartQuiz(){
     this.result = 0;
     this.totalResult = 0;
+    this.currentQuestion = 0;
+    this.router.navigate([`question/${this.currentQuestion}`]);
+
   }
 
   // Place all varibles here
+  currentQuestion = 0;
   result = 0;
   totalResult = 0;
   finalResult = "clown";
