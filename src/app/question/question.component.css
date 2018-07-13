@@ -1,13 +1,64 @@
-.parallax {
-    /* The image used */
-    background-image: url("https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg");
-
-    /* Set a specific height */
-    min-height: 500px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+.hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: "Alfa Slab One", bold;
+  }
+  
+  .hero-text {
+    padding-left: 8em;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 35vw;
+    z-index: 50;
+    text-align: center;
+  }
+  .hero-text h1 {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+  }
+  .bgimg{
+    
+      background-image: url("https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg")
+  }
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .hero-image img {
+     
+    margin-top: -25%;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  .slow-grow {
+    -webkit-animation: grow 110000ms ease;
+            animation: grow 110000ms ease;
+  }
+  
+  @-webkit-keyframes grow {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  
+  @keyframes grow {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
