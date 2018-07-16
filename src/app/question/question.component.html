@@ -4,19 +4,11 @@
   <div class="hero-text">
     <div class="col-lg-4 text-center m-auto ">
       <!-- show the questions title -->
-<<<<<<< Updated upstream
       <h1 class="color">Questions{{ this.quiz.currentQuestion}}:{{this.quiz.questions[this.quiz.currentQuestion].question}}</h1>
     </div>
     <div class="row d-flex justify-content-center mt-5">
       <div class="col-lg-4 text-center ">
         <div class="color size" *ngFor="let choice of this.quiz.questions[this.quiz.currentQuestion].choices ">
-=======
-      <h1>Questions {{ quiz.currentQuestion+1}}:{{quiz.questions[quiz.currentQuestion].question}}</h1>
-    </div>
-    <div class="row d-flex justify-content-center mt-5">
-      <div class="col-lg-4 text-center">
-        <div *ngFor="let choice of quiz.questions[quiz.currentQuestion].choices">
->>>>>>> Stashed changes
           {{ choice.answer }}
           <input [value]="choice.value" type="radio" [(ngModel)]="quiz.questions
           [quiz.currentQuestion].selectedAnswer">
