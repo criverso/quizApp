@@ -54,12 +54,16 @@ export class QuizService {
 
     if (totalResult <= 9) {
       this.finalResult = "clown";
+      this.finalPic = "clown.gif";
     } else if (totalResult <= 19) {
-      return this.finalResult = "beardedlady";
+      this.finalResult = "beardedlady";
+      this.finalPic = "beardedlady.gif";
     } else if (totalResult <= 29) {
-      return this.finalResult = "acrobat";
+      this.finalResult = "acrobat";
+      this.finalPic = "arobat.gif"
     } else if (totalResult <= 40) {
-      return this.finalResult = "ringmaster";
+      this.finalResult = "ringmaster";
+      this.finalPic = "ringmaster.gif";
     }
 
   }
@@ -90,6 +94,7 @@ export class QuizService {
   result = 0;
   totalResult = 0;
   finalResult = "clown";
+  finalPic = "clown.gif";
 
   // Array of questions
   questions = [
