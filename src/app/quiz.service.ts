@@ -53,7 +53,7 @@ export class QuizService {
   getResult(totalResult){
 
     if (totalResult <= 9) {
-      return this.finalResult = "clown";
+      this.finalResult = "clown";
     } else if (totalResult <= 19) {
       return this.finalResult = "beardedlady";
     } else if (totalResult <= 29) {
