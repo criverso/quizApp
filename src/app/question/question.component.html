@@ -2,23 +2,23 @@
   <div class="hero-image"><img class="slow-grow" src="https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg
  "/></div>
   <div class="hero-text">
-    <div class="col-lg-4 text-center m-auto ">
+    <div class="col-lg-4 text-center m-auto width-">
       <!-- show the questions title -->
-      <h1 class="color">Questions{{ this.quiz.currentQuestion}}:{{this.quiz.questions[this.quiz.currentQuestion].question}}</h1>
+      <h1 class="color">Questions {{ quiz.currentQuestion+1}}: {{quiz.questions[quiz.currentQuestion].question}}</h1>
     </div>
     <div class="row d-flex justify-content-center mt-5">
-      <div class="col-lg-4 text-center ">
-        <div class="color size" *ngFor="let choice of this.quiz.questions[this.quiz.currentQuestion].choices ">
+      <div class="col-lg-4 text-center m-auto width- ">
+        <div class="color size" *ngFor="let choice of quiz.questions[quiz.currentQuestion].choices ">
           {{ choice.answer }}
-          <input [value]="choice.value" type="radio" [(ngModel)]="this.quiz.questions
-          [this.quiz.currentQuestion].selectedAnswer">
+          <input [value]="choice.value" type="radio" [(ngModel)]="quiz.questions
+          [quiz.currentQuestion].selectedAnswer">
         </div>
       </div>
     </div>
     <div class="row d-flex justify-content-center mt-3">
       <div class="col-lg-4 d-flex justify-content-between text-center">
-        <button (click)="this.quiz.goPreviousQuestion()" class="btn-danger">Go Back</button>
-        <button (click)="this.quiz.goNextQuestion(choice.value)" class="btn btn-success">Col</button>
+        <button (click)="quiz.goPreviousQuestion()" class="btn-danger">Previous</button>
+        <button (click)="quiz.goNextQuestion(choice.value)" class="btn btn-success">Next</button>
       </div>
     </div>
   </div>
