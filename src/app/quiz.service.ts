@@ -8,14 +8,15 @@ export class QuizService {
 
   // Gets the value from user and adds it to the total and moves to next question.
   goNextQuestion() {
-    this.totalResult = this.totalResult + this.result;
     
-    if (this.currentQuestion < 10 ) {
-      this.currentQuestion++;
+    if (this.currentQuestion < 9 ) {
 
+      this.currentQuestion++;
       this.router.navigate([`/question/${this.currentQuestion}`]);
       
     } else {
+
+      this.calculateResult();
       this.getResult(this.totalResult);
       this.router.navigate([`/result`]);
 
@@ -23,25 +24,34 @@ export class QuizService {
 
   }
 
-  // This returns back depending a page.
+  // This returns back a page depending where the user is at.
   goPreviousQuestion(){
+
     if(this.currentQuestion > 0 ) {
+
       this.currentQuestion--;
-      
       this.router.navigate([`question/${this.currentQuestion}`]);
+
     } else {
+
+      this.resetValues();
       this.router.navigate([`/`]);
     }
 
   }
 
+  // Adds the results to totalResult to determine when the user gets at the end.
   calculateResult() {
+
     for(let i = 0; i < this.questions.length; i++) {
       this.totalResult += this.questions[i].selectedAnswer;
+
     }
+
   }
   // Checks to see what is the final results and display the results.
   getResult(totalResult){
+
     if (totalResult <= 9) {
       return this.finalResult = "clown";
     } else if (totalResult <= 19) {
@@ -51,18 +61,31 @@ export class QuizService {
     } else if (totalResult <= 40) {
       return this.finalResult = "ringmaster";
     }
+
   }
 
-  // restartQuiz Function to restarts the result value back to 0.
-  restartQuiz(){
+  // Resets all the values back to default.
+  resetValues() {
+
     this.result = 0;
     this.totalResult = 0;
     this.currentQuestion = 0;
+    
+    for(let x = 0; x <= 9; x++) {
+      this.questions[x].selectedAnswer = null;
+    }
+    
+  }
+
+  // Restarts all values back to default and returns to the beginning of the quiz.
+  restartQuiz(){
+    
+    this.resetValues();
     this.router.navigate([`question/${this.currentQuestion}`]);
 
   }
 
-  // Place all varibles here
+  // Global varibles
   currentQuestion = 0;
   result = 0;
   totalResult = 0;
@@ -73,7 +96,7 @@ export class QuizService {
     // Question 1
     {
       question: "Which choice best describes you?",
-      selectedAnswer: 0,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Teach",
@@ -96,7 +119,7 @@ export class QuizService {
     // Question 2
     {
       question: "What is your best quality?",
-      selectedAnswer: 1,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Outgoing Personality",
@@ -119,7 +142,7 @@ export class QuizService {
     // Question 3
     {
       question: "What kind of music do you like?",
-      selectedAnswer: 2,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Country",
@@ -142,7 +165,7 @@ export class QuizService {
     // Question 4
     {
       question: "Are you an introvert or an extrovert?",
-      selectedAnswer: 3,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Introvert",
@@ -165,7 +188,7 @@ export class QuizService {
     // Question 5
     {
       question: "What is your favorite subject?",
-      selectedAnswer: 4,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. English",
@@ -189,7 +212,7 @@ export class QuizService {
     // Insert a picture in choices
     {
       question: "Which vehicle do you like best",
-      selectedAnswer: 5,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Ford Focus",
@@ -212,7 +235,7 @@ export class QuizService {
     // Question 7
     {
       question: "What can't you live without?",
-      selectedAnswer: 6,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Books",
@@ -236,7 +259,7 @@ export class QuizService {
     // Insert Picture in choices
     { 
       question: "Which style suits you best?",
-      selectedAnswer: 7,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. slacks and tennis",
@@ -259,7 +282,7 @@ export class QuizService {
     // Question 9
     {
       question: "Which activity do you like doing the most?",
-      selectedAnswer: 8,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Arts and Crafts",
@@ -283,7 +306,7 @@ export class QuizService {
     // Insert Picture in choices
     { 
       question: "Which meal do you like the most?",
-      selectedAnswer: 9,
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Tacos",
