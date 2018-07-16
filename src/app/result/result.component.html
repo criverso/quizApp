@@ -1,16 +1,24 @@
 <!-- Displays depending on the final results-->
-<div class="container-fluid resultBG">
-  <div class="row resultBG text-center m-5">
-    <div class="col">
-        
-            <div>{{ quiz.finalResult }}</div>
-      
-    </div>
-  </div>
+<div class="resultBG">
+  <div class="container-fluid">
+    <div class="row text-center m-5">
+      <div class="col">
+          
+        <div>You are...{{ quiz.finalResult }}!</div>
+        <div [ngSwitch]="quiz.finalResult">
+          <div *ngSwitchCase="ringmaster"><img src="ringmaster.gif" width="86px"></div>
+          <div *ngSwitchCase="acrobat"><img src="acrobat.gif" width="86px"></div>
+          <div *ngSwitchCase="beardedlady"><img src="beardedlady.gif" width="86px"></div>
+          <div *ngSwitchDefault><img src="clown.gif"></div>
+        </div>
 
-  <div class="row resultBG text-center m-3">
-    <div class="col">
-      <a routerLink="/question/1"><button class="btn btn-primaty" (click)="quiz.restartQuiz()">Restart Quiz?</button></a>
+      </div>
+    </div>
+
+    <div class="row text-center m-3">
+      <div class="col">
+        <button class="btn btn-primaty" (click)="quiz.restartQuiz()">Restart Quiz?</button>
+      </div>
     </div>
   </div>
 </div>
