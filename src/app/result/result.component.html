@@ -5,12 +5,7 @@
       <div class="col">
           
         <div>You are...{{ quiz.finalResult }}!</div>
-        <div [ngSwitch]="quiz.finalResult">
-          <div *ngSwitchCase="ringmaster"><img src="ringmaster.gif" width="86px"></div>
-          <div *ngSwitchCase="acrobat"><img src="acrobat.gif" width="86px"></div>
-          <div *ngSwitchCase="beardedlady"><img src="beardedlady.gif" width="86px"></div>
-          <div *ngSwitchDefault><img src="clown.gif"></div>
-        </div>
+        <div><img src="/assets/{{quiz.finalPic}}"></div>
 
       </div>
     </div>
