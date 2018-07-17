@@ -60,7 +60,7 @@ export class QuizService {
       this.finalPic = "beardedlady.gif";
     } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
-      this.finalPic = "arobat.gif"
+      this.finalPic = "acrobat.gif"
     } else if (totalResult <= 35) {
       this.finalResult = "ringmaster";
       this.finalPic = "ringmaster.gif";
@@ -105,18 +105,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Red Nose",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Cristal Ball",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Spiffy Hat",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. A whip ",
+          image: "",
           value: 4, 
         }
       ], 
@@ -128,18 +132,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Outgoing Personality",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Drive and Focus",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Good Looks",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. Kindness",
+          image: "",
           value: 4, 
         }
       ],
@@ -151,18 +159,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Country",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Metal",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Pop music",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. Classical",
+          image: "",
           value: 4, 
         }
       ],
@@ -174,18 +186,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Introvert",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Exrovert",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Both",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. I don't know",
+          image: "",
           value: 4, 
         }
       ],
@@ -197,18 +213,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Family",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Friends",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Education",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. Adventure",
+          image: "",
           value: 4, 
         }
       ],
@@ -221,22 +241,26 @@ export class QuizService {
       choices: [ 
         {
           // Movies
-          answer: ("http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg"),
+          answer: "",
+          image: "http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg",
           value: 1, 
         },
         {
           // Netflix & Chill
-          answer:("https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg"),
+          answer:"",
+          image: "https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg",
           value: 2, 
         },
         {
           // In the club
-          answer: ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0"),
+          answer: "",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0",
           value: 3, 
         },
         {
           // At the gym
-          answer: ("https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg"),
+          answer: "",
+          image: "https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg",
           value: 4, 
         }
       ],
@@ -248,18 +272,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Get on the rides",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Eat yummy food",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Play Games",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. Visiit the fortune teller",
+          image: "",
           value: 4, 
         }
       ],
@@ -272,22 +300,26 @@ export class QuizService {
       choices: [ 
         {
           // LION
-          answer: "http://www.maryellenmark.com/images/300px_s/401T-759-007.jpg",
+          answer: "",
+          image: "http://www.maryellenmark.com/images/300px_s/401T-759-007.jpg",
           value: 1, 
         },
         {
           // ELEPHANT
-          answer: "https://www.gannett-cdn.com/-mm-/9065941e142eb769bb76794c742e08d1e14ee558/r=300/http/www.gannett-cdn.com/-mm-/9065941e142eb769bb76794c742e08d1e14ee558/r=300/http/www.gannett-cdn.com/-mm-/68e5abe6d3f6150b2acd31f8c7ca37e00ab2771d/c=847-0-2849-2002/local/-/media/2016/04/29/USATODAY/USATODAY/635975265056381420-XXX-JJC4237.JPG",
+          answer: "",
+          image: "https://www.gannett-cdn.com/-mm-/9065941e142eb769bb76794c742e08d1e14ee558/r=300/http/www.gannett-cdn.com/-mm-/9065941e142eb769bb76794c742e08d1e14ee558/r=300/http/www.gannett-cdn.com/-mm-/68e5abe6d3f6150b2acd31f8c7ca37e00ab2771d/c=847-0-2849-2002/local/-/media/2016/04/29/USATODAY/USATODAY/635975265056381420-XXX-JJC4237.JPG",
           value: 2, 
         },
         {
           // ZEBRAS
-          answer: "https://imgc.allpostersimages.com/img/posters/joanne-williams-black-white-of-zebra-and-plain-kenya_u-L-PZXX6Q0.jpg?src=gp&w=300&h=375",
+          answer: "",
+          image: "https://imgc.allpostersimages.com/img/posters/joanne-williams-black-white-of-zebra-and-plain-kenya_u-L-PZXX6Q0.jpg?src=gp&w=300&h=375",
           value: 3, 
         },
         {
           // PONY
-          answer: "https://d3f49glnpfzr7k.cloudfront.net/medium/ecc71da7-a48d-44e5-9064-d1a6d2ee2384.jpg",
+          answer: "",
+          image: "https://d3f49glnpfzr7k.cloudfront.net/medium/ecc71da7-a48d-44e5-9064-d1a6d2ee2384.jpg",
           value: 4, 
         }
       ],
@@ -299,18 +331,22 @@ export class QuizService {
       choices: [ 
         {
           answer: "A. Fire Eater",
+          image: "",
           value: 1, 
         },
         {
           answer: "B. Lion Tamer",
+          image: "",
           value: 2, 
         },
         {
           answer: "C. Trapeze",
+          image: "",
           value: 3, 
         },
         {
           answer: "D. Clowns",
+          image: "",
           value: 4, 
         }
       ],
@@ -323,22 +359,26 @@ export class QuizService {
       choices: [ 
         {
           // funnel cake
-          answer: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxkjpuNC3o5gQpF5WLEYC165nOEu6tDAXAgTlyA6mcG6hbHHL",
+          answer: "",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxkjpuNC3o5gQpF5WLEYC165nOEu6tDAXAgTlyA6mcG6hbHHL",
           value: 1, 
         },
         {
           // popcorn
-          answer: "http://lifemadesimplebakes.com/wp-content/uploads/2016/01/Black-Pepper-Parmesan-Popcorn-1-300x300.jpg",
+          answer: "",
+          image: "http://lifemadesimplebakes.com/wp-content/uploads/2016/01/Black-Pepper-Parmesan-Popcorn-1-300x300.jpg",
           value: 2, 
         },
         {
           // cottoncandy
-          answer: "https://stevejobko.com/wp-content/uploads/2016/01/cotton-candy-300x300.jpg",
+          answer: "",
+          image: "https://stevejobko.com/wp-content/uploads/2016/01/cotton-candy-300x300.jpg",
           value: 3, 
         },
         {
           // onion blosom
-          answer: "https://i.pinimg.com/originals/0d/2f/93/0d2f934002b583cb66886b71bdb7253a.jpg",
+          answer: "",
+          image: "https://i.pinimg.com/originals/0d/2f/93/0d2f934002b583cb66886b71bdb7253a.jpg",
           value: 4, 
         }
       ]

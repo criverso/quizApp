@@ -7,7 +7,7 @@
   }
   .col-lg-4{
     padding-top: 100px;
-    max-width: 100%;
+    max-width: 200%;
     flex: 100%;
     padding-left: 3em;
   }
@@ -16,6 +16,9 @@
   }
   .color{
     color: #fff;
+  }
+  img {
+    padding: 5px;
   }
   .hero-text {
     
@@ -27,7 +30,7 @@
     top: 1rem;
     left: 0;
     
-    
+
     z-index: 50;
     text-align: center;
   }
@@ -36,23 +39,25 @@
     color: #fff;
     font-weight: 600;
   }
-  
+.questionsBox {
+  background:rgba(0, 0, 0, 0.3);
+}
   .hero-image {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -2;
   }
   .hero-image img {
-      height: 1400px;
-    width: 1440;
+      height: 1200px;
+    width: 1440px;
     margin-top: -25%;
     -webkit-transform-origin: bottom right;
             transform-origin: bottom right;
   }
   .slow-grow {
-    -webkit-animation: grow 110000ms ease;
-            animation: grow 110000ms ease;
+    -webkit-animation: grow 140000ms ease;
+            animation: grow 140000ms ease;
   }
   
   @-webkit-keyframes grow {

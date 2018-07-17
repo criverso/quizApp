@@ -1,18 +1,24 @@
 <div class="hero">
-  <div class="hero-image"><img class="slow-grow" src="https://cdn.pixabay.com/photo/2015/07/02/10/16/circus-828680_960_720.jpg
- "/></div>
+  <div class="hero-image"><img class="slow-grow" src="/assets/Circus.jpg"/></div>
   <div class="hero-text">
-    <div class="col-lg-4 text-center m-auto width-">
+    <!-- questionsBox -->
+    <div class="questionsBox">
+    <div class=" col-lg-4 text-center m-auto width-">
       <!-- show the questions title -->
       <h1 class="color">Questions {{ quiz.currentQuestion+1}}: {{quiz.questions[quiz.currentQuestion].question}}</h1>
     </div>
+    <div class="row">
     <div class="row d-flex justify-content-center mt-5">
-      <div class="col-lg-4 text-center m-auto width- ">
-        <div class="color size" *ngFor="let choice of quiz.questions[quiz.currentQuestion].choices ">
-          <!-- Added image tag -->
-          <img src="{{ choice.answer }}">
-          <input [value]="choice.value" type="radio" [(ngModel)]="quiz.questions
-          [quiz.currentQuestion].selectedAnswer">
+      <div class="col-lg-4 p-5 text-center m-auto width- ">
+        <div class="color size p-1 m-1">
+              <div *ngFor="let choice of quiz.questions[quiz.currentQuestion].choices" class="justify-content-center">
+                  <input [value]="choice.value" type="radio" [(ngModel)]="quiz.questions>
+                  [quiz.currentQuestion].selectedAnswer">
+              <img  *ngIf="choice.image.length > 0" src="{{ choice.image }}" width="175px"> 
+            {{ choice.answer }}
+              </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
