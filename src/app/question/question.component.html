@@ -9,7 +9,8 @@
     <div class="row d-flex justify-content-center mt-5">
       <div class="col-lg-4 text-center m-auto width- ">
         <div class="color size" *ngFor="let choice of quiz.questions[quiz.currentQuestion].choices ">
-          {{ choice.answer }}
+          <!-- Added image tag -->
+          <img src="{{ choice.answer }}">
           <input [value]="choice.value" type="radio" [(ngModel)]="quiz.questions
           [quiz.currentQuestion].selectedAnswer">
         </div>
