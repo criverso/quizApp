@@ -52,16 +52,16 @@ export class QuizService {
   // Checks to see what is the final results and display the results.
   getResult(totalResult){
 
-    if (totalResult <= 9) {
+    if (totalResult <= 15) {
       this.finalResult = "clown";
       this.finalPic = "clown.gif";
-    } else if (totalResult <= 19) {
+    } else if (totalResult <= 25) {
       this.finalResult = "beardedlady";
       this.finalPic = "beardedlady.gif";
-    } else if (totalResult <= 29) {
+    } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
       this.finalPic = "arobat.gif"
-    } else if (totalResult <= 40) {
+    } else if (totalResult <= 35) {
       this.finalResult = "ringmaster";
       this.finalPic = "ringmaster.gif";
     }
@@ -221,22 +221,22 @@ export class QuizService {
       choices: [ 
         {
           // Movies
-          answer: "http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg",
+          answer: ("http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg"),
           value: 1, 
         },
         {
           // Netflix & Chill
-          answer: "https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg",
+          answer:("https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg"),
           value: 2, 
         },
         {
           // In the club
-          answer: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0",
+          answer: ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0"),
           value: 3, 
         },
         {
           // At the gym
-          answer: "https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg",
+          answer: ("https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg"),
           value: 4, 
         }
       ],
