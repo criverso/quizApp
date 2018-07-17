@@ -7,7 +7,7 @@
   }
   .col-lg-4{
     padding-top: 100px;
-    max-width: 100%;
+    max-width: 200%;
     flex: 100%;
     padding-left: 3em;
   }
@@ -16,6 +16,9 @@
   }
   .color{
     color: #fff;
+  }
+  img {
+    padding: 5px;
   }
   .hero-text {
     
@@ -27,7 +30,7 @@
     top: 1rem;
     left: 0;
     
-    
+
     z-index: 50;
     text-align: center;
   }
@@ -36,10 +39,9 @@
     color: #fff;
     font-weight: 600;
   }
-  
-
-
-  
+.questionsBox {
+  background:rgba(0, 0, 0, 0.3);
+}
   .hero-image {
     position: fixed;
     top: 0;
