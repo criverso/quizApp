@@ -221,22 +221,22 @@ export class QuizService {
       choices: [ 
         {
           // Movies
-          answer: "http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg",
+          answer: ("http://www.marcustheatres.com/media/images/theatre-small-images/136-majestic-cinema-of-brookfield-brookfield.jpg"),
           value: 1, 
         },
         {
           // Netflix & Chill
-          answer: "https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg",
+          answer:("https://www.bellanaija.com/wp-content/uploads/2017/01/Buhari_Vacation_January-2017-300x300.jpg"),
           value: 2, 
         },
         {
           // In the club
-          answer: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0",
+          answer: ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fH4v93J1g8_YlH5CBf26lTvYZoRdUaLU6-r3Ng2-QnbfUZE0"),
           value: 3, 
         },
         {
           // At the gym
-          answer: "https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg",
+          answer: ("https://www.warriormafit.com/wp-content/uploads/2018/02/workout-partner-300x300.jpg"),
           value: 4, 
         }
       ],
