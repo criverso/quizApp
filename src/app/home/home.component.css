@@ -46,3 +46,7 @@ button {
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
 }
+
+i:hover{
+  opacity: 0.2;
+}
