@@ -52,16 +52,16 @@ export class QuizService {
   // Checks to see what is the final results and display the results.
   getResult(totalResult){
 
-    if (totalResult <= 9) {
+    if (totalResult <= 15) {
       this.finalResult = "clown";
       this.finalPic = "clown.gif";
-    } else if (totalResult <= 19) {
+    } else if (totalResult <= 25) {
       this.finalResult = "beardedlady";
       this.finalPic = "beardedlady.gif";
-    } else if (totalResult <= 29) {
+    } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
       this.finalPic = "arobat.gif"
-    } else if (totalResult <= 40) {
+    } else if (totalResult <= 35) {
       this.finalResult = "ringmaster";
       this.finalPic = "ringmaster.gif";
     }
