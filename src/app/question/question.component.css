@@ -1,16 +1,32 @@
 .hero {
     height: 100vh;
     overflow: hidden;
-    position: relative;
-    font-family: "Alfa Slab One", bold;
-    text-align: center;
-  }
   
+    font-family: "Alfa Slab One", bold;
+    align-content: center;
+  }
+  .col-lg-4{
+    padding-top: 100px;
+    max-width: 100%;
+    flex: 100%;
+    padding-left: 3em;
+  }
+  .size{
+    font-size: 40px;
+  }
+  .color{
+    color: #fff;
+  }
   .hero-text {
-    padding-left: 8em;
+    
+    padding-left: 20rem;
+    padding-right: 20rem;
+    
+    align-content: center;
     position: absolute;
     top: 1rem;
     left: 0;
+    
     
     z-index: 50;
     text-align: center;
