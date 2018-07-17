@@ -1,10 +1,10 @@
 <!-- Displays depending on the final results -->
-<div class="resultBG">
-  <div class="container-fluid m-3">
+<div class="resultBG p-5">
+  <div class="container-fluid">
     <div class="row text-center m-5">
       <div class="col">
           
-        <div class="m-2">You are...{{ quiz.finalResult }}!</div>
+        <h1 class="m-2">You are...{{ quiz.finalResult }}!</h1>
         <div><img src="/assets/{{quiz.finalPic}}"></div>
 
       </div>
@@ -12,7 +12,8 @@
 
     <div class="row text-center m-3">
       <div class="col">
-        <button class="btn btn-primaty" (click)="quiz.restartQuiz()">Restart Quiz?</button>
+          <p>Restart Quiz?</p>
+          <button (click)="quiz.restartQuiz()"><i class="fas fa-ticket-alt"></i></button>
       </div>
     </div>
   </div>
