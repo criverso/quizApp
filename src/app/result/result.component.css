@@ -3,7 +3,7 @@
     background-image: url("https://media2.giphy.com/media/10TI5vPyELuuHu/giphy.gif");
 
     /* Set a specific height */
-    height: 700px; 
+    height: 800px; 
     top: 0;
     left: 0;
     width: 100%;
@@ -18,4 +18,16 @@
 
 .col  {
         color: white;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.0);
+    font-size: 80px;
+    border: none;
+    color: red !important; 
+}
+.ticket {
+    color: #ffec7fe7;
 }
