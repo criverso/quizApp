@@ -29,5 +29,20 @@ button {
     color: red !important; 
 }
 .ticket {
-    color: #ffec7fe7;
+    color: #ffec7fe7;  
 }
+.css3-notification {
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+  
+    color: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
+    text-transform: uppercase;
+    position: relative;
+    font-weight: bold;
+  }
+
+  i:hover{
+    opacity: 0.8;
+  }

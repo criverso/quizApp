@@ -54,8 +54,8 @@
             transform-origin: bottom right;
   }
   .slow-grow {
-    -webkit-animation: grow 110000ms ease;
-            animation: grow 110000ms ease;
+    -webkit-animation: grow 140000ms ease;
+            animation: grow 140000ms ease;
   }
   
   @-webkit-keyframes grow {
