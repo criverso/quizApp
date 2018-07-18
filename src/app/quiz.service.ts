@@ -13,7 +13,8 @@ export class QuizService {
 
       this.currentQuestion++;
       this.router.navigate([`/question/${this.currentQuestion}`]);
-      
+      console.log(this.totalResult);
+      console.log(this.questions[this.currentQuestion].selectedAnswer);
     } else {
 
       this.calculateResult();
@@ -45,7 +46,7 @@ export class QuizService {
 
     for(let i = 0; i < this.questions.length; i++) {
       this.totalResult += this.questions[i].selectedAnswer;
-
+      console.log(this.totalResult);
     }
 
   }
@@ -100,7 +101,7 @@ export class QuizService {
   questions = [
     // Question 1
     {
-      question: "Pick a circus accessory?",
+      question: "Pick a circus accessory",
       selectedAnswer: null,
       choices: [ 
         {
@@ -286,7 +287,7 @@ export class QuizService {
           value: 3, 
         },
         {
-          answer: "D. Visiit the fortune teller",
+          answer: "D. Visit the fortune teller",
           image: "",
           value: 4, 
         }
@@ -295,7 +296,7 @@ export class QuizService {
     // Question 8
     // Insert Picture in choices
     { 
-      question: "What is your favorite circus Animal?",
+      question: "What is your favorite circus animal?",
       selectedAnswer: null,
       choices: [ 
         {
