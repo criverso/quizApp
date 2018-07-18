@@ -14,7 +14,7 @@
     padding-top: 10px;
     max-width: 200%;
     flex: 100%;
-    padding-left: 5em!important;
+
     
   }
   .size{
@@ -40,6 +40,7 @@
 
     z-index: 50;
     text-align: center;
+    width: 100%;
   }
   .hero-text h1 {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
@@ -94,10 +95,10 @@
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
+    color: white;
 }
 
 button:hover {
-    
     color: black;
 }
 
