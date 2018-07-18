@@ -100,8 +100,8 @@ export class QuizService {
   questions = [
     // Question 1
     {
-      id: 1,
       question: "Pick a circus accessory?",
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Red Nose",
@@ -208,8 +208,8 @@ export class QuizService {
     },
     // Question 5
     {
-      id: 5,
       question: "What is more important to you?",
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Family",
@@ -236,8 +236,8 @@ export class QuizService {
     // Question 6
     // Insert a picture in choices
     {
-      id: 6,
       question: "Where can you be found during the weekend?",
+      selectedAnswer: null,
       choices: [ 
         {
           // Movies
@@ -267,8 +267,8 @@ export class QuizService {
     },
     // Question 7
     {
-      id: 7,
       question: "What will you do at the carnival?",
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Get on the rides",
@@ -295,8 +295,8 @@ export class QuizService {
     // Question 8
     // Insert Picture in choices
     { 
-      id: 8,
       question: "What is your favorite circus Animal?",
+      selectedAnswer: null,
       choices: [ 
         {
           // LION
@@ -326,8 +326,8 @@ export class QuizService {
     },
     // Question 9
     {
-      id: 9,
       question: "What is your favorite circus act?",
+      selectedAnswer: null,
       choices: [ 
         {
           answer: "A. Fire Eater",
@@ -354,8 +354,8 @@ export class QuizService {
     // Question 10
     // Insert Picture in choices
     { 
-      id: 10,
       question: "Choose a circus snack?",
+      selectedAnswer: null,
       choices: [ 
         {
           // funnel cake
@@ -387,5 +387,6 @@ export class QuizService {
 
   constructor(private router: Router) {
     this.router = router;
+    
    }
 }
