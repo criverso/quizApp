@@ -108,7 +108,7 @@ export class QuizService {
           value: 1, 
         },
         {
-          answer: "B. Cristal Ball",
+          answer: "B. Crystal Ball",
           image: "",
           value: 2, 
         },
@@ -207,7 +207,7 @@ export class QuizService {
     },
     // Question 5
     {
-      question: "What is more important to you?",
+      question: "What is most important to you?",
       selectedAnswer: null,
       choices: [ 
         {
@@ -353,7 +353,7 @@ export class QuizService {
     // Question 10
     // Insert Picture in choices
     { 
-      question: "Choose a circus snack?",
+      question: "Choose a circus snack",
       selectedAnswer: null,
       choices: [ 
         {

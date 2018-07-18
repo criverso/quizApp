@@ -46,3 +46,8 @@ button {
   i:hover{
     opacity: 0.8;
   }
+  h1 {
+    font-family: 'Sancreek', cursive;
+    color: yellow !important;
+    font-size: 5em !important;
+  }
