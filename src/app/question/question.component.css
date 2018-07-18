@@ -6,7 +6,7 @@
     align-content: center;
   }
   .col-lg-4{
-    padding-top: 100px;
+    padding-top: 10px;
     max-width: 200%;
     flex: 100%;
     padding-left: 3em;
@@ -82,3 +82,24 @@
               transform: scale(1.5);
     }
   }
+
+  button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+}
+
+button:hover {
+    color: black;
+}
+
+.previous {
+   
+    color: black;
+}
+
+.next {
+
+    color: white;
+}

@@ -13,8 +13,7 @@ export class QuizService {
 
       this.currentQuestion++;
       this.router.navigate([`/question/${this.currentQuestion}`]);
-      console.log(this.totalResult);
-      console.log(this.questions[this.currentQuestion].selectedAnswer);
+      
     } else {
 
       this.calculateResult();
@@ -46,7 +45,6 @@ export class QuizService {
 
     for(let i = 0; i < this.questions.length; i++) {
       this.totalResult += this.questions[i].selectedAnswer;
-      console.log(this.totalResult);
     }
 
   }
@@ -62,7 +60,7 @@ export class QuizService {
     } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
       this.finalPic = "acrobat.gif"
-    } else if (totalResult <= 35) {
+    } else if (totalResult <= 40) {
       this.finalResult = "ringmaster";
       this.finalPic = "ringmaster.gif";
     }
@@ -388,6 +386,6 @@ export class QuizService {
 
   constructor(private router: Router) {
     this.router = router;
-    
+
    }
 }
