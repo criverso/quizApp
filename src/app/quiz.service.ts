@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { $ } from '../../node_modules/protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,25 @@ export class QuizService {
   // Gets the value from user and adds it to the total and moves to next question.
   goNextQuestion() {
     
-    if (this.currentQuestion < 9 ) {
+    // Checks to see if user selects a answer or not.
+    if (this.questions[this.currentQuestion].selectedAnswer != null) {
 
-      this.currentQuestion++;
-      this.router.navigate([`/question/${this.currentQuestion}`]);
-      
+      if (this.currentQuestion < 9) {
+
+        this.currentQuestion++;
+        this.router.navigate([`/question/${this.currentQuestion}`]);
+        
+      } else {
+
+        this.calculateResult();
+        this.getResult(this.totalResult);
+        this.router.navigate([`/result`]);
+
+      }
+
     } else {
 
-      this.calculateResult();
-      this.getResult(this.totalResult);
-      this.router.navigate([`/result`]);
+      alert("Please select a answer!!!");
 
     }
 
@@ -27,7 +37,7 @@ export class QuizService {
   // This returns back a page depending where the user is at.
   goPreviousQuestion(){
 
-    if(this.currentQuestion > 0 ) {
+    if(this.currentQuestion > 0) {
 
       this.currentQuestion--;
       this.router.navigate([`question/${this.currentQuestion}`]);
