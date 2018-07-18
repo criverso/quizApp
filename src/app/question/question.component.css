@@ -87,10 +87,10 @@
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
+    color: white;
 }
 
 button:hover {
-    
     color: black;
 }
 
