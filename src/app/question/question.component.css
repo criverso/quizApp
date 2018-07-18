@@ -4,12 +4,18 @@
   
     font-family: "Alfa Slab One", bold;
     align-content: center;
+  
+  }
+  .shadowbox{
+    background:rgba(0, 0, 0, 0.3);
+    padding-right: 10px;
   }
   .col-lg-4{
     padding-top: 10px;
     max-width: 200%;
     flex: 100%;
-    padding-left: 3em;
+
+    
   }
   .size{
     font-size: 40px;
@@ -34,15 +40,17 @@
 
     z-index: 50;
     text-align: center;
+    width: 100%;
   }
   .hero-text h1 {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-weight: 600;
+    
   }
-.questionsBox {
-  background:rgba(0, 0, 0, 0.3);
-}
+  
+ 
+
   .hero-image {
     position: fixed;
     top: 0;
