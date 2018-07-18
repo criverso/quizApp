@@ -26,10 +26,11 @@ button {
   height: 100%;
   pointer-events: none;
 }
-/* #vidtop-content {
-	float: left;
-	color: #fff;
-} */
+h1 {
+  font-family: 'Sancreek', cursive;
+  color: yellow;
+  font-size: 4em !important;
+}
 .vid-info { position: absolute; left: 0px; top: 30%; width: 100%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
 .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
 .vid-info a { display: block; color: #fff; text-decoration: none;  transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
