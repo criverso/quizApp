@@ -8,7 +8,7 @@ import { QuizService } from '../quiz.service';
 })
 export class ResultComponent implements OnInit {
 
-  constructor(private quiz: QuizService) {
+  constructor(public quiz: QuizService) {
     this.quiz = quiz;
    }
 
