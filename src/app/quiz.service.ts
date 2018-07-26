@@ -16,13 +16,13 @@ export class QuizService {
       if (this.currentQuestion < 9) {
 
         this.currentQuestion++;
-        this.router.navigate([`/question/${this.currentQuestion}`]);
+        this.router.navigate([`question/${this.currentQuestion}`]);
         
       } else {
 
         this.calculateResult();
         this.getResult(this.totalResult);
-        this.router.navigate([`/result`]);
+        this.router.navigate([`result`]);
 
       }
 
