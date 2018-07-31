@@ -63,16 +63,16 @@ export class QuizService {
 
     if (totalResult <= 15) {
       this.finalResult = "clown";
-      this.finalPic = "https://i.imgur.com/Bg15GtC.gif";
+      this.finalPic = "/assets/clown.gif";
     } else if (totalResult <= 25) {
       this.finalResult = "beardedlady";
-      this.finalPic = "https://i.imgur.com/xpoYhKe.gif";
+      this.finalPic = "/assets/beardedlady.gif";
     } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
-      this.finalPic = "https://i.imgur.com/9c3ClZU.gif"
+      this.finalPic = "/assets/acrobat.gif"
     } else if (totalResult <= 40) {
       this.finalResult = "ringmaster";
-      this.finalPic = "https://i.imgur.com/rmk71Mc.gif";
+      this.finalPic = "/assets/ringmaster.gif";
     }
 
   }
