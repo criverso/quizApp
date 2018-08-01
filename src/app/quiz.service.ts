@@ -63,16 +63,16 @@ export class QuizService {
 
     if (totalResult <= 15) {
       this.finalResult = "clown";
-      this.finalPic = "clown.gif";
+      this.finalPic = "./assets/clown.gif";
     } else if (totalResult <= 25) {
       this.finalResult = "beardedlady";
-      this.finalPic = "beardedlady.gif";
+      this.finalPic = "./assets/beardedlady.gif";
     } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
-      this.finalPic = "acrobat.gif"
+      this.finalPic = "./assests/acrobat.gif"
     } else if (totalResult <= 40) {
       this.finalResult = "ringmaster";
-      this.finalPic = "ringmaster.gif";
+      this.finalPic = "./assets/ringmaster.gif";
     }
 
   }
