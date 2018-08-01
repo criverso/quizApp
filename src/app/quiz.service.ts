@@ -69,7 +69,7 @@ export class QuizService {
       this.finalPic = "./assets/beardedlady.gif";
     } else if (totalResult <= 30) {
       this.finalResult = "acrobat";
-      this.finalPic = "./assests/acrobat.gif"
+      this.finalPic = "./assets/acrobat.gif"
     } else if (totalResult <= 40) {
       this.finalResult = "ringmaster";
       this.finalPic = "./assets/ringmaster.gif";
